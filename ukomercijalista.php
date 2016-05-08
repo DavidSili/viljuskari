@@ -18,7 +18,7 @@ if(isset($_GET['a'])) {
 			else $telefon="";
 		
 		$sql='INSERT INTO komercijalisti (`ime`,`telefon`) VALUES ("'.$ime.'","'.$telefon.'")';
-		mysql_query($sql) or die (mysql_error());
+		mysqli_query($mysqli,$sql) or die;
 }
 ?>
 

@@ -18,7 +18,7 @@ if(isset($_GET['a'])) {
 			else $zemlja="";
 		
 		$sql='INSERT INTO proizvodjaci (`ime`,`zemlja`) VALUES ("'.$ime.'","'.$zemlja.'")';
-		mysql_query($sql) or die (mysql_error());
+		mysqli_query($mysqli,$sql) or die;
 }
 ?>
 

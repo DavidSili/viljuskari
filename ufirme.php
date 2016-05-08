@@ -44,7 +44,7 @@ if(isset($_GET['a'])) {
 			else $napomena="";
 		
 		$sql='INSERT INTO firme (`ime`,`mb`,`delatnost`,`pib`,`adresa`,`mesto`,`telefon`,`fax`,`mobilni`,`kontakt`,`pozicija`,`email`,`www`,`komercijalista`,`napomena`) VALUES ("'.$ime.'","'.$mb.'","'.$delatnost.'","'.$pib.'","'.$adresa.'","'.$mesto.'","'.$telefon.'","'.$fax.'","'.$mobilni.'","'.$kontakt.'","'.$pozicija.'","'.$email.'","'.$www.'","'.$komercijalista.'","'.$napomena.'")';
-		mysql_query($sql) or die (mysql_error());
+		mysqli_query($mysqli,$sql) or die;
 }
 ?>
 
@@ -116,8 +116,8 @@ if(isset($_GET['a'])) {
 				<select type="text" name="c_komercijalista" style="width:200px">
 			<?php
 					$sql = 'SELECT * FROM komercijalisti ORDER BY ime';
-					$result = mysql_query($sql)or die(mysql_error());
-					while($row = mysql_fetch_assoc($result)){
+					$result = mysqli_query($mysqli,$sql)or die;
+					while($row=$result->fetch_assoc()) {
 						$ID=$row['ID'];
 						$ime=$row['ime'];
 						

@@ -135,7 +135,7 @@ if(isset($_GET['a'])) {
 			else $napomena="";
 
 		$sql='INSERT INTO viljuskari (`vrsta`,`vlasnik`,`upis`,`proizvodjac`,`model`,`tip`,`serijski`,`godina`,`pogon`,`gasmod`,`gasbroj`,`gassonda`,`nosivost`,`radnihsati`,`ravnoteza`,`tezina`,`radijus`,`prolaz`,`brzina`,`pojas`,`kran1`,`kran2`,`kran3`,`kran4`,`kran5`,`kran6`,`viljuske1`,`viljuske2`,`viljuske3`,`viljuske4`,`viljuske5`,`motor1`,`motor2`,`motor3`,`motor4`,`motor5`,`motor6`,`motor7`,`baterija1`,`baterija2`,`baterija3`,`felne1`,`felne2`,`felne3`,`felne4`,`felne5`,`felne6`,`gume1`,`gume2`,`gume3`,`gume4`,`gume5`,`gume6`,`gume7`,`gume8`,`signal1`,`signal2`,`signal3`,`signal4`,`napomena`) VALUES ("'.$vrsta.'","'.$vlasnik.'","'.$upis.'","'.$proizvodjac.'","'.$model.'","'.$tip.'","'.$serijski.'","'.$godina.'","'.$pogon.'","'.$gasmod.'","'.$gasbroj.'","'.$gassonda.'","'.$nosivost.'","'.$radnihsati.'","'.$ravnoteza.'","'.$tezina.'","'.$radijus.'","'.$prolaz.'","'.$brzina.'","'.$pojas.'","'.$kran1.'","'.$kran2.'","'.$kran3.'","'.$kran4.'","'.$kran5.'","'.$kran6.'","'.$viljuske1.'","'.$viljuske2.'","'.$viljuske3.'","'.$viljuske4.'","'.$viljuske5.'","'.$motor1.'","'.$motor2.'","'.$motor3.'","'.$motor4.'","'.$motor5.'","'.$motor6.'","'.$motor7.'","'.$baterija1.'","'.$baterija2.'","'.$baterija3.'","'.$felne1.'","'.$felne2.'","'.$felne3.'","'.$felne4.'","'.$felne5.'","'.$felne6.'","'.$gume1.'","'.$gume2.'","'.$gume3.'","'.$gume4.'","'.$gume5.'","'.$gume6.'","'.$gume7.'","'.$gume8.'","'.$signal1.'","'.$signal2.'","'.$signal3.'","'.$signal4.'","'.$napomena.'")';
-		mysql_query($sql) or die (mysql_error());
+		mysqli_query($mysqli,$sql) or die;
 
 }
 
@@ -165,8 +165,8 @@ if(isset($_GET['a'])) {
 				<select type="text" name="a_vlasnik" style="width:200px">
 			<?php
 					$sql = 'SELECT * FROM firme';
-					$result = mysql_query($sql)or die(mysql_error());
-					while($row = mysql_fetch_assoc($result)){
+					$result = mysqli_query($mysqli,$sql)or die;
+					while($row=$result->fetch_assoc()) {
 						$ID=$row['ID'];
 						$ime=$row['ime'];
 						
@@ -184,8 +184,8 @@ if(isset($_GET['a'])) {
 				<select type="text" name="a_proizvodjac" style="width:200px">
 			<?php
 					$sql = 'SELECT * FROM proizvodjaci';
-					$result = mysql_query($sql)or die(mysql_error());
-					while($row = mysql_fetch_assoc($result)){
+					$result = mysqli_query($mysqli,$sql)or die;
+					while($row=$result->fetch_assoc()) {
 						$ID=$row['ID'];
 						$ime=$row['ime'];
 						$zemlja=$row['zemlja'];

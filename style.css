@@ -82,7 +82,7 @@
 	float:left;
 	text-align:right;
 	margin-right:10px;
-	height:24px;
+	height:20px;
 	line-height:24px;
 }
 .b1 {
@@ -90,4 +90,8 @@
 }
 .b2 {
 	background:#FFF;
+}
+#bigbox > div {
+	height:23px;
+	padding-top:2px;
 }

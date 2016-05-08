@@ -66,7 +66,7 @@ if(isset($_GET['a'])) {
 		else $delovib='';
 	
 	$sql='INSERT INTO delovi (`nalog`,`viljuskar`,`radnik`,`datum`,`naziv`,`broj`) VALUES ("'.$radninalog.'","'.$viljuskar.'","'.$radnik.'","'.$datumzatvaranja.'","'.$delovia.'","'.$delovib.'")';
-	if ($delovia!='' AND $delovib!='' AND (strtotime($datumotvaranja)<strtotime($datumzatvaranja))) mysql_query($sql) or die (mysql_error());
+	if ($delovia!='' AND $delovib!='' AND (strtotime($datumotvaranja)<strtotime($datumzatvaranja))) mysqli_query($mysqli,$sql) or die;
 	
 	if ($delovia!='' AND $delovib!='') $delovix.=$delovia.' ('.$delovib.'), ';
 	}
@@ -74,7 +74,7 @@ if(isset($_GET['a'])) {
 	
 	$sql='INSERT INTO nalozi (`radnik`,`radninalog`,`tipnaloga`,`datumotvaranja`,`datumzatvaranja`,`viljuskar`,`sati`,`satiserv`,`teren`,`defektaza`,`napomena`,`delovi`) VALUES ("'.$rdn.'","'.$radninalog.'","'.$tipnaloga.'","'.$datumotvaranja.'","'.$datumzatvaranja.'","'.$viljuskar.'","'.$sati.'","'.$satiserv.'","'.$teren.'","'.$defektaza.'","'.$napomena.'","'.$delovix.'")';
 	echo $sql;
-	mysql_query($sql) or die (mysql_error());
+	mysqli_query($mysqli,$sql) or die;
 
 	
 }
@@ -97,8 +97,8 @@ if(isset($_GET['a'])) {
 				<select type="text" name="d_radnik[]" style="width:200px" size="6" multiple>
 			<?php
 					$sql = 'SELECT * FROM radnici ORDER BY ime';
-					$result = mysql_query($sql)or die(mysql_error());
-					while($row = mysql_fetch_assoc($result)){
+					$result = mysqli_query($mysqli,$sql)or die;
+					while($row=$result->fetch_assoc()) {
 						$ID=$row['ID'];
 						$ime=$row['ime'];
 						
@@ -131,8 +131,8 @@ if(isset($_GET['a'])) {
 				<select type="text" name="d_viljuskar" style="width:200px">
 			<?php
 					$sql = 'SELECT proizvodjaci.ime AS ime, viljuskari.model, viljuskari.upis FROM proizvodjaci, viljuskari WHERE (viljuskari.proizvodjac = proizvodjaci.ID)';
-					$result = mysql_query($sql)or die(mysql_error());
-					while($row = mysql_fetch_assoc($result)){
+					$result = mysqli_query($mysqli,$sql)or die;
+					while($row=$result->fetch_assoc()) {
 						$model=$row['model'];
 						$upis=$row['upis'];
 						$proizvodjac=$row['ime'];
@@ -147,7 +147,7 @@ if(isset($_GET['a'])) {
 				<input type="text" name="d_sati" style="width:200px" />
 			</div>
 			<div class="b2">
-				<div class="left" style="font-size:13">Dnevni rad servisera u satima: </div>
+				<div class="left" style="font-size:13pt">Dnevni rad servisera u satima: </div>
 				<input type="text" name="d_satiserv" style="width:200px" />
 			</div>
 			<div class="b1">
