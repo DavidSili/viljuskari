@@ -5,7 +5,7 @@
 	  type="image/png"
 	  href="favicon.png">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Viljuskari - unos</title>
+<title>Viljuškari</title>
 <link type='text/css' rel='stylesheet' href='style.css' />
 </head>
 <body>

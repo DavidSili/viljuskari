@@ -41,8 +41,8 @@
 			<span style="float:left;margin-top:4px">Pretraga po koloni: </span>	
 			<select name="sel1" style="float:left">
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM nalozi");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM nalozi");
+	while ($row=$result->fetch_assoc()) {
         echo '<option value="'.$row['Field'].'" ';
 		if ($sel1==$row['Field']) echo 'selected';
 		echo '>'.$row['Comment'].'</option>';
@@ -53,8 +53,8 @@
 			<span style="float:left;margin-top:4px"> i sortiranje po koloni: </span>	
 			<select name="sel3" style="float:left">
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM nalozi");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM nalozi");
+	while ($row=$result->fetch_assoc()) {
         echo '<option value="'.$row['Field'].'" ';
 		if ($sel3==$row['Field']) echo 'selected';
 		echo '>'.$row['Comment'].'</option>';
@@ -74,8 +74,8 @@
 <table border=1>
 <tr>
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM nalozi");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM nalozi");
+	while ($row=$result->fetch_assoc()) {
         echo '<th>'.$row['Comment'].'</th>';
     }
 ?>
@@ -84,8 +84,8 @@
 	$radarrno=array();
 	$radarrda=array();
 	$sql='SELECT ID, ime FROM radnici';
-	$result=mysql_query($sql) or die (mysql_error());
-	while($row=mysql_fetch_assoc($result)) {
+	$result=mysqli_query($mysqli,$sql) or die;
+	while($row=$result->fetch_assoc()) {
 		array_push($radarrno,$row['ID']);
 		array_push($radarrda,$row['ime']);
 	}
@@ -94,9 +94,9 @@
 	if ($sel2!="") $sql.=' WHERE `'.$sel1.'` LIKE "%'.$sel2.'%" ORDER BY `'.$sel3.'` '.$sel4;
 	else $sql.=' ORDER BY `'.$sel3.'` '.$sel4;
 	if ($sel5!="") $sql.=' LIMIT '.$sel5;
-	$result=mysql_query($sql) or die (mysql_error());
+	$result=mysqli_query($mysqli,$sql) or die;
 	$count=1;
-	while($row=mysql_fetch_assoc($result)) {
+	while($row=$result->fetch_assoc()) {
 		echo '<tr>';
 		foreach($row as $cell) {
 		if ($count<=12) {

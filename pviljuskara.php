@@ -41,8 +41,8 @@
 			<span style="float:left;margin-top:4px">Pretraga po koloni: </span>	
 			<select name="sel1" style="float:left">
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM viljuskari");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM viljuskari");
+	while ($row=$result->fetch_assoc()) {
         echo '<option value="`viljuskari`.`'.$row['Field'].'`" ';
 		if ($sel1==$row['Field']) echo 'selected';
 		echo '>'.$row['Comment'].'</option>';
@@ -53,8 +53,8 @@
 			<span style="float:left;margin-top:4px"> i sortiranje po koloni: </span>	
 			<select name="sel3" style="float:left">
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM viljuskari");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM viljuskari");
+	while ($row=$result->fetch_assoc()) {
         echo '<option value="`viljuskari`.`'.$row['Field'].'`" ';
 		if ($sel3==$row['Field']) echo 'selected';
 		echo '>'.$row['Comment'].'</option>';
@@ -74,8 +74,8 @@
 <table border=1>
 <tr>
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM viljuskari");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM viljuskari");
+	while ($row=$result->fetch_assoc()) {
         echo '<th>'.$row['Comment'].'</th>';
     }
 ?>
@@ -85,8 +85,8 @@
 	if ($sel2!="") $sql.=' AND '.$sel1.' LIKE "%'.$sel2.'%" ORDER BY '.$sel3.' '.$sel4;
 	else $sql.=' ORDER BY '.$sel3.' '.$sel4;
 	if ($sel5!="") $sql.=' LIMIT '.$sel5;
-	$result=mysql_query($sql) or die (mysql_error());
-	while($row=mysql_fetch_assoc($result)) {
+	$result=mysqli_query($mysqli,$sql) or die;
+	while($row=$result->fetch_assoc()) {
 		echo '<tr>';
 		foreach($row as $cell) {
 		if ((substr($cell,4,1)=="-") AND (substr($cell,7,1)=="-")) $cell=date('d.m.Y.',strtotime($cell));

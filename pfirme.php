@@ -41,8 +41,8 @@
 			<span style="float:left;margin-top:4px">Pretraga po koloni: </span>	
 			<select name="sel1" style="float:left">
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM firme");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM firme");
+	while ($row=$result->fetch_assoc()) {
 		if ($row['Field']!='komercijalista') {
 			echo '<option value="`firme`.`'.$row['Field'].'`" ';
 			if ($sel1=='`firme`.`'.$row['Field'].'`') echo 'selected';
@@ -55,8 +55,8 @@
 			<span style="float:left;margin-top:4px"> i sortiranje po koloni: </span>	
 			<select name="sel3" style="float:left">
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM firme");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM firme");
+	while ($row=$result->fetch_assoc()) {
         echo '<option value="`firme`.`'.$row['Field'].'`" ';
 		if ($sel3=='`firme`.`'.$row['Field'].'`') echo 'selected';
 		echo '>'.$row['Comment'].'</option>';
@@ -76,8 +76,8 @@
 <table border=1>
 <tr>
 <?php
-	$result = mysql_query("SHOW FULL COLUMNS FROM firme");
-	while ($row = mysql_fetch_assoc($result)) {
+	$result = mysqli_query($mysqli,"SHOW FULL COLUMNS FROM firme");
+	while ($row=$result->fetch_assoc()) {
         echo '<th>'.$row['Comment'].'</th>';
     }
 ?>
@@ -87,9 +87,9 @@
 	if ($sel2!="") $sql.=' AND '.$sel1.' LIKE "%'.$sel2.'%" ORDER BY '.$sel3.' '.$sel4;
 	else $sql.=' ORDER BY '.$sel3.' '.$sel4;
 	if ($sel5!="") $sql.=' LIMIT '.$sel5;
-	$result=mysql_query($sql) or die (mysql_error());
+	$result=mysqli_query($mysqli,$sql) or die;
 	$count=1;
-	while($row=mysql_fetch_assoc($result)) {
+	while($row=$result->fetch_assoc()) {
 		echo '<tr>';
 		$komime=$row['komime'];
 		foreach($row as $cell) {
