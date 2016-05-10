@@ -118,15 +118,15 @@ if(isset($_GET['a'])) {
 					$sql = 'SELECT * FROM komercijalisti ORDER BY ime';
 					$result = mysqli_query($mysqli,$sql)or die;
 					while($row=$result->fetch_assoc()) {
-						$ID=$row['ID'];
+						$id=$row['id'];
 						$ime=$row['ime'];
 						
-					echo '<option value="'.$ID.'">'.$ime.'</option>';
+					echo '<option value="'.$id.'">'.$ime.'</option>';
 					}
 			?>
 				</select>
 			</div>
-			<div class="b1">
+			<div class="b1" style="height:103px">
 				<div class="left">Napomena: </div>
 				<textarea name="c_napomena" style="font-family:arial;width:200px;height:100px" ></textarea>
 			</div>

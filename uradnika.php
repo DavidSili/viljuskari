@@ -20,7 +20,7 @@ if(isset($_GET['a'])) {
 			else $telefon="";
 		
 		$sql='INSERT INTO radnici (`ime`,`pozicija`,`telefon`) VALUES ("'.$ime.'","'.$pozicija.'","'.$telefon.'")';
-		mysqli_query($mysqli,$sql) or die (mysqli_error($mysqli).' - '.$sql);
+		mysqli_query($mysqli,$sql) or die;
 }
 ?>
 

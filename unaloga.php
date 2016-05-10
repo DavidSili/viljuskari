@@ -53,11 +53,10 @@ if(isset($_GET['a'])) {
 
 	$rdn="";
 	foreach ($radnik as $a) {
-		$rdn.=$a.', ';
+		$rdn.=$a.',';
 	}
 	$rdn=substr($rdn, 0, -1);
-	echo $rdn.'<br/>';
-	
+
 	$delovix="";
 	for ($i = 1; $i <= $hide; $i++) {
 	if(isset($_POST['d_delovi'.$i.'a'])) $delovia=$_POST['d_delovi'.$i.'a'];
@@ -65,15 +64,14 @@ if(isset($_GET['a'])) {
 	if(isset($_POST['d_delovi'.$i.'b'])) $delovib=$_POST['d_delovi'.$i.'b'];
 		else $delovib='';
 	
-	$sql='INSERT INTO delovi (`nalog`,`viljuskar`,`radnik`,`datum`,`naziv`,`broj`) VALUES ("'.$radninalog.'","'.$viljuskar.'","'.$radnik.'","'.$datumzatvaranja.'","'.$delovia.'","'.$delovib.'")';
-	if ($delovia!='' AND $delovib!='' AND (strtotime($datumotvaranja)<strtotime($datumzatvaranja))) mysqli_query($mysqli,$sql) or die;
+	$sql='INSERT INTO delovi (`nalog`,`viljuskar`,`radnik`,`datum`,`naziv`,`broj`) VALUES ("'.$radninalog.'","'.$viljuskar.'","'.$rdn.'","'.$datumzatvaranja.'","'.$delovia.'","'.$delovib.'")';
+	if ($delovia!='' AND $delovib!='' AND (strtotime($datumotvaranja)<=strtotime($datumzatvaranja))) mysqli_query($mysqli,$sql) or die;
 	
 	if ($delovia!='' AND $delovib!='') $delovix.=$delovia.' ('.$delovib.'), ';
 	}
 	$delovix=substr($delovix, 0, -2);
 	
 	$sql='INSERT INTO nalozi (`radnik`,`radninalog`,`tipnaloga`,`datumotvaranja`,`datumzatvaranja`,`viljuskar`,`sati`,`satiserv`,`teren`,`defektaza`,`napomena`,`delovi`) VALUES ("'.$rdn.'","'.$radninalog.'","'.$tipnaloga.'","'.$datumotvaranja.'","'.$datumzatvaranja.'","'.$viljuskar.'","'.$sati.'","'.$satiserv.'","'.$teren.'","'.$defektaza.'","'.$napomena.'","'.$delovix.'")';
-	echo $sql;
 	mysqli_query($mysqli,$sql) or die;
 
 	
@@ -91,7 +89,7 @@ if(isset($_GET['a'])) {
 <div id="wrapper">
 	<form method="post" action="unaloga.php?a=1">
 		<div id="bigbox" style="margin-right:5px">
-			<div class="b1">
+			<div class="b1" style="height:107px">
 				<div class="left">Radnik: </div>
 														<!-- Ovde promeni za veličinu ListBox-a -->
 				<select type="text" name="d_radnik[]" style="width:200px" size="6" multiple>
@@ -99,10 +97,10 @@ if(isset($_GET['a'])) {
 					$sql = 'SELECT * FROM radnici ORDER BY ime';
 					$result = mysqli_query($mysqli,$sql)or die;
 					while($row=$result->fetch_assoc()) {
-						$ID=$row['ID'];
+						$id=$row['id'];
 						$ime=$row['ime'];
 						
-					echo '<option value="'.$ID.'">'.$ime.'</option>';
+					echo '<option value="'.$id.'">'.$ime.'</option>';
 					}
 			?>
 				</select>
@@ -120,11 +118,11 @@ if(isset($_GET['a'])) {
 			</div>
 			<div class="b2">
 				<div class="left">Datum otvaranja naloga: </div>
-				<input type="text" name="d_datumotvaranja" style="width:200px" />
+				<input type="date" name="d_datumotvaranja" style="width:200px" />
 			</div>
 			<div class="b1">
 				<div class="left">Datum zatvaranja naloga: </div>
-				<input type="text" name="d_datumzatvaranja" style="width:200px" />
+				<input type="date" name="d_datumzatvaranja" style="width:200px" />
 			</div>
 			<div class="b2">
 				<div class="left">Viljuškar: </div>
@@ -147,7 +145,7 @@ if(isset($_GET['a'])) {
 				<input type="text" name="d_sati" style="width:200px" />
 			</div>
 			<div class="b2">
-				<div class="left" style="font-size:13pt">Dnevni rad servisera u satima: </div>
+				<div class="left" style="font-size:10pt">Dnevni rad servisera u satima: </div>
 				<input type="text" name="d_satiserv" style="width:200px" />
 			</div>
 			<div class="b1">
@@ -157,11 +155,11 @@ if(isset($_GET['a'])) {
 					<option>Na terenu</option>
 				</select>
 			</div>
-			<div class="b2">
+			<div class="b2" style="height:202px">
 				<div class="left">Defektaža: </div>
 				<textarea name="d_defektaza" style="font-family:arial;width:200px;height:200px" ></textarea>
 			</div>
-			<div class="b1" style="padding-top:2px">
+			<div class="b1" style="padding-top:2px;height:103px">
 				<div class="left">Napomena: </div>
 				<textarea name="d_napomena" style="font-family:arial;width:200px;height:100px" ></textarea>
 			</div>
@@ -186,7 +184,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi1b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi2a" style="width:200px" />
 				</div>
@@ -194,7 +192,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi2b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi3a" style="width:200px" />
 				</div>
@@ -202,7 +200,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi3b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi4a" style="width:200px" />
 				</div>
@@ -210,7 +208,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi4b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi5a" style="width:200px" />
 				</div>
@@ -218,7 +216,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi5b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi6a" style="width:200px" />
 				</div>
@@ -226,7 +224,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi6b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi7a" style="width:200px" />
 				</div>
@@ -234,7 +232,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi7b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi8a" style="width:200px" />
 				</div>
@@ -252,7 +250,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi9b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi10a" style="width:200px" />
 				</div>
@@ -260,7 +258,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi10b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi11a" style="width:200px" />
 				</div>
@@ -268,7 +266,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi11b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi12a" style="width:200px" />
 				</div>
@@ -276,7 +274,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi12b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi13a" style="width:200px" />
 				</div>
@@ -284,7 +282,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi13b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi14a" style="width:200px" />
 				</div>
@@ -292,7 +290,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi14b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi15a" style="width:200px" />
 				</div>
@@ -300,7 +298,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi15b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi16a" style="width:200px" />
 				</div>
@@ -318,7 +316,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi17b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi18a" style="width:200px" />
 				</div>
@@ -326,7 +324,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi18b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi19a" style="width:200px" />
 				</div>
@@ -334,7 +332,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi19b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi20a" style="width:200px" />
 				</div>
@@ -342,7 +340,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi20b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi21a" style="width:200px" />
 				</div>
@@ -350,7 +348,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi21b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi22a" style="width:200px" />
 				</div>
@@ -358,7 +356,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi22b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi23a" style="width:200px" />
 				</div>
@@ -366,7 +364,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi23b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi24a" style="width:200px" />
 				</div>
@@ -384,7 +382,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi25b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi26a" style="width:200px" />
 				</div>
@@ -392,7 +390,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi26b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi27a" style="width:200px" />
 				</div>
@@ -400,7 +398,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi27b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi28a" style="width:200px" />
 				</div>
@@ -408,7 +406,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi28b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi29a" style="width:200px" />
 				</div>
@@ -416,7 +414,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi29b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi30a" style="width:200px" />
 				</div>
@@ -424,7 +422,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi30b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi31a" style="width:200px" />
 				</div>
@@ -432,7 +430,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi31b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi32a" style="width:200px" />
 				</div>
@@ -450,7 +448,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi33b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi34a" style="width:200px" />
 				</div>
@@ -458,7 +456,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi34b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi35a" style="width:200px" />
 				</div>
@@ -466,7 +464,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi35b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi36a" style="width:200px" />
 				</div>
@@ -474,7 +472,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi36b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi37a" style="width:200px" />
 				</div>
@@ -482,7 +480,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi37b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi38a" style="width:200px" />
 				</div>
@@ -490,7 +488,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi38b" style="width:200px" />
 				</div>
-				<div class="b1" style="padding-top:10px">
+				<div class="b1">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi39a" style="width:200px" />
 				</div>
@@ -498,7 +496,7 @@ if(isset($_GET['a'])) {
 					<div class="left" style="font-weight:normal">broj: </div>
 					<input type="text" name="d_delovi39b" style="width:200px" />
 				</div>
-				<div class="b2" style="padding-top:10px">
+				<div class="b2">
 					<div class="left" style="font-weight:normal">naziv: </div>
 					<input id="autocomplete" name="d_delovi40a" style="width:200px" />
 				</div>

@@ -95,3 +95,30 @@
 	height:23px;
 	padding-top:2px;
 }
+#bigbox > #hide1,
+#bigbox > #hide2,
+#bigbox > #hide3,
+#bigbox > #hide4,
+#bigbox > #hide5 {
+	height: 407px;
+}
+#hide1 > div,
+#hide2 > div,
+#hide3 > div,
+#hide4 > div,
+#hide5 > div {
+	height:48px;
+}
+#hide1 .b1,
+#hide1 .b2,
+#hide2 .b1,
+#hide2 .b2,
+#hide3 .b1,
+#hide3 .b2,
+#hide4 .b1,
+#hide4 .b2,
+#hide5 .b1,
+#hide5 .b2 {
+	height:23px;
+	padding-top:2px;
+}

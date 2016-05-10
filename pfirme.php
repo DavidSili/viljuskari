@@ -83,7 +83,7 @@
 ?>
 </tr>
 <?php
-	$sql='SELECT firme.*, komercijalisti.ime AS komime FROM firme, komercijalisti WHERE (firme.komercijalista = komercijalisti.ID)';
+	$sql='SELECT firme.*, komercijalisti.ime AS komime FROM firme, komercijalisti WHERE (firme.komercijalista = komercijalisti.id)';
 	if ($sel2!="") $sql.=' AND '.$sel1.' LIKE "%'.$sel2.'%" ORDER BY '.$sel3.' '.$sel4;
 	else $sql.=' ORDER BY '.$sel3.' '.$sel4;
 	if ($sel5!="") $sql.=' LIMIT '.$sel5;

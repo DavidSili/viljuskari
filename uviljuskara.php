@@ -167,10 +167,10 @@ if(isset($_GET['a'])) {
 					$sql = 'SELECT * FROM firme';
 					$result = mysqli_query($mysqli,$sql)or die;
 					while($row=$result->fetch_assoc()) {
-						$ID=$row['ID'];
+						$id=$row['id'];
 						$ime=$row['ime'];
 						
-					echo '<option value="'.$ID.'">'.$ime.'</option>';
+					echo '<option value="'.$id.'">'.$ime.'</option>';
 					}
 			?>
 				</select>
@@ -186,11 +186,11 @@ if(isset($_GET['a'])) {
 					$sql = 'SELECT * FROM proizvodjaci';
 					$result = mysqli_query($mysqli,$sql)or die;
 					while($row=$result->fetch_assoc()) {
-						$ID=$row['ID'];
+						$id=$row['id'];
 						$ime=$row['ime'];
 						$zemlja=$row['zemlja'];
 						
-					echo '<option value="'.$ID.'">'.$ime.' ('.$zemlja.')</option>';
+					echo '<option value="'.$id.'">'.$ime.' ('.$zemlja.')</option>';
 					}
 			?>
 				</select>
@@ -211,29 +211,14 @@ if(isset($_GET['a'])) {
 			<div class="b2">
 				<div class="left">Godina proizvodnje: </div>
 				<select type="text" name="a_godina" style="width:60px;margin-right:10px">*
-					<option>1990</option>
-					<option>1991</option>
-					<option>1992</option>
-					<option>1993</option>
-					<option>1994</option>
-					<option>1995</option>
-					<option>1996</option>
-					<option>1997</option>
-					<option>1998</option>
-					<option>1999</option>
-					<option>2000</option>
-					<option>2001</option>
-					<option>2002</option>
-					<option>2003</option>
-					<option>2004</option>
-					<option>2005</option>
-					<option>2006</option>
-					<option>2007</option>
-					<option>2008</option>
-					<option>2009</option>
-					<option>2010</option>
-					<option>2011</option>
-					<option selected>2012</option>
+					<?php
+					$ovagodina=date('Y');
+					for ($x = 1990; $x <= $ovagodina; $x++) {
+						echo "<option";
+						if ($x==$ovagodina) echo " selected";
+						echo ">$x</option>";
+					}
+					?>
 				</select><b>Pogon:</b>
 				<select type="text" name="a_pogon" style="width:77px" onchange="conditional_hide(this.value)">*
 					<option value="Dizel">Dizel</option>
@@ -244,7 +229,7 @@ if(isset($_GET['a'])) {
 		<!--
 			Kod select-a možeš ovako da ostaviš, a možeš i da promeniš vrednosti. Npr... želiš da ti prikaže reč "TNG" a da vrednost varijable bude "gas". Onda bi trebala da napišeš: <option value="gas">TNG</option>
 		-->
-			<div id="cond" style="display:none">
+			<div id="cond" style="display:none;height:68px">
 				<div class="b2">
 					<div class="left">Model gas uređaja: </div>
 					<input type="text" name="a_gasmod" style="width:200px" />
@@ -512,7 +497,7 @@ if(isset($_GET['a'])) {
 				<input type="radio" name="a_signal4" value="ne" />
 				</span>
 			</div>
-			<div class="b1">
+			<div class="b1" style="height:103px">
 				<div class="left">Napomena: </div>
 				<textarea name="a_napomena" style="font-family:arial;width:200px;height:100px" ></textarea>
 			</div>
