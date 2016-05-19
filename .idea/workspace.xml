@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22257122-4ad1-485f-8bc1-df102cc3f4f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pfirme.php" afterPath="$PROJECT_DIR$/pfirme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/toolbar.html" afterPath="$PROJECT_DIR$/toolbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pnaloga.php" afterPath="$PROJECT_DIR$/pnaloga.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pproizvodjaca.php" afterPath="$PROJECT_DIR$/pproizvodjaca.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pradnika.php" afterPath="$PROJECT_DIR$/pradnika.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pviljuskara.php" afterPath="$PROJECT_DIR$/pviljuskara.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ufirme.php" afterPath="$PROJECT_DIR$/ufirme.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ukomercijalista.php" afterPath="$PROJECT_DIR$/ukomercijalista.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unaloga.php" afterPath="$PROJECT_DIR$/unaloga.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uproizvodjaca.php" afterPath="$PROJECT_DIR$/uproizvodjaca.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uradnika.php" afterPath="$PROJECT_DIR$/uradnika.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uviljuskara.php" afterPath="$PROJECT_DIR$/uviljuskara.php" />
     </list>
@@ -30,76 +32,7 @@
     <favorites_list name="viljuskari" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="unaloga.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unaloga.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="65.38461">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <marker date="1462910844997" expanded="true" signature="2646:2826" placeholder="INSERT INTO delovi..." />
-                <marker date="1462910844997" expanded="true" signature="3087:3452" placeholder="INSERT INTO nalozi..." />
-                <marker date="1462910844997" expanded="true" signature="3993:4027" placeholder="SELECT * FRO..radnici..." />
-                <marker date="1462910844997" expanded="true" signature="5085:5229" placeholder="SELECT proiz..proizvodjaci..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uradnika.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uradnika.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.1538463">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-              <folding>
-                <marker date="1462910902878" expanded="true" signature="604:703" placeholder="INSERT INTO radnici..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uviljuskara.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uviljuskara.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.769231">
-              <caret line="137" column="41" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
-              <folding>
-                <marker date="1462910921825" expanded="true" signature="5324:6793" placeholder="INSERT INTO viljuskari..." />
-                <marker date="1462910921825" expanded="true" signature="7476:7495" placeholder="SELECT * FRO..firme..." />
-                <marker date="1462910921825" expanded="true" signature="8018:8044" placeholder="SELECT * FRO..proizvodjaci..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ufirme.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ufirme.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32586208">
-              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-              <folding>
-                <marker date="1462910938173" expanded="true" signature="1562:1935" placeholder="INSERT INTO firme..." />
-                <marker date="1462910938173" expanded="true" signature="4070:4111" placeholder="SELECT * FRO..komercijalisti..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pdelova.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pdelova.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.192307">
-              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
-              <folding>
-                <marker date="1462820908534" expanded="true" signature="2785:2798" placeholder="..." />
-                <marker date="1462820908534" expanded="true" signature="2855:2947" placeholder="SELECT *, de..delovi..." />
-                <marker date="1462820908534" expanded="true" signature="3626:3639" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,22 +41,22 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/connect.php" />
-        <option value="$PROJECT_DIR$/uproizvodjaca.php" />
-        <option value="$PROJECT_DIR$/ukomercijalista.php" />
-        <option value="$PROJECT_DIR$/pradnika.php" />
         <option value="$PROJECT_DIR$/pkomercijalista.php" />
-        <option value="$PROJECT_DIR$/pviljuskara.php" />
-        <option value="$PROJECT_DIR$/pnaloga.php" />
         <option value="$PROJECT_DIR$/pdelova.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/pproizvodjaca.php" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/pfirme.php" />
         <option value="$PROJECT_DIR$/toolbar.html" />
-        <option value="$PROJECT_DIR$/unaloga.php" />
-        <option value="$PROJECT_DIR$/uradnika.php" />
-        <option value="$PROJECT_DIR$/uviljuskara.php" />
+        <option value="$PROJECT_DIR$/pproizvodjaca.php" />
+        <option value="$PROJECT_DIR$/pradnika.php" />
+        <option value="$PROJECT_DIR$/pnaloga.php" />
+        <option value="$PROJECT_DIR$/pviljuskara.php" />
+        <option value="$PROJECT_DIR$/ukomercijalista.php" />
         <option value="$PROJECT_DIR$/ufirme.php" />
+        <option value="$PROJECT_DIR$/uproizvodjaca.php" />
+        <option value="$PROJECT_DIR$/uviljuskara.php" />
+        <option value="$PROJECT_DIR$/uradnika.php" />
+        <option value="$PROJECT_DIR$/unaloga.php" />
       </list>
     </option>
   </component>
@@ -143,7 +76,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1378" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -171,6 +105,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,7 +126,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -247,14 +181,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17474303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17423134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -265,6 +198,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -288,12 +222,70 @@
     <entry file="file://$PROJECT_DIR$/unaloga.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <marker date="1463687066846" expanded="true" signature="3293:3473" placeholder="INSERT INTO delovi..." />
+            <marker date="1463687066846" expanded="true" signature="3734:4099" placeholder="INSERT INTO nalozi..." />
+            <marker date="1463687066846" expanded="true" signature="4640:4674" placeholder="SELECT * FRO..radnici..." />
+            <marker date="1463687066846" expanded="true" signature="5732:5876" placeholder="SELECT proiz..proizvodjaci..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uradnika.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding>
+            <marker date="1463686830908" expanded="true" signature="706:805" placeholder="INSERT INTO radnici..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uviljuskara.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="41" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
+          <folding>
+            <marker date="1463686802757" expanded="true" signature="7364:8833" placeholder="INSERT INTO viljuskari..." />
+            <marker date="1463686802757" expanded="true" signature="9516:9535" placeholder="SELECT * FRO..firme..." />
+            <marker date="1463686802757" expanded="true" signature="10058:10084" placeholder="SELECT * FRO..proizvodjaci..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ufirme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1462910844997" expanded="true" signature="2646:2826" placeholder="INSERT INTO delovi..." />
-            <marker date="1462910844997" expanded="true" signature="3087:3452" placeholder="INSERT INTO nalozi..." />
-            <marker date="1462910844997" expanded="true" signature="3993:4027" placeholder="SELECT * FRO..radnici..." />
-            <marker date="1462910844997" expanded="true" signature="5085:5229" placeholder="SELECT proiz..proizvodjaci..." />
+            <marker date="1463686541795" expanded="true" signature="2072:2445" placeholder="INSERT INTO firme..." />
+            <marker date="1463686541795" expanded="true" signature="4580:4621" placeholder="SELECT * FRO..komercijalisti..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdelova.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+          <folding>
+            <marker date="1462820908534" expanded="true" signature="2785:2798" placeholder="..." />
+            <marker date="1462820908534" expanded="true" signature="2855:2947" placeholder="SELECT *, de..delovi..." />
+            <marker date="1462820908534" expanded="true" signature="3626:3639" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unaloga.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1463687066846" expanded="true" signature="3293:3473" placeholder="INSERT INTO delovi..." />
+            <marker date="1463687066846" expanded="true" signature="3734:4099" placeholder="INSERT INTO nalozi..." />
+            <marker date="1463687066846" expanded="true" signature="4640:4674" placeholder="SELECT * FRO..radnici..." />
+            <marker date="1463687066846" expanded="true" signature="5732:5876" placeholder="SELECT proiz..proizvodjaci..." />
           </folding>
         </state>
       </provider>
@@ -302,7 +294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -311,10 +302,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1462821150036" expanded="true" signature="2274:2300" placeholder="SELECT * FRO..proizvodjaci..." />
-            <marker date="1462821150036" expanded="true" signature="2624:2638" placeholder="..." />
-            <marker date="1462821150036" expanded="true" signature="2663:2677" placeholder="..." />
-            <marker date="1462821150036" expanded="true" signature="2703:2717" placeholder="..." />
+            <marker date="1463686296099" expanded="true" signature="2410:2436" placeholder="SELECT * FRO..proizvodjaci..." />
+            <marker date="1463686296099" expanded="true" signature="2760:2774" placeholder="..." />
+            <marker date="1463686296099" expanded="true" signature="2799:2813" placeholder="..." />
+            <marker date="1463686296099" expanded="true" signature="2839:2853" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -323,7 +314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -347,10 +337,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="49" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
           <folding>
-            <marker date="1462910844997" expanded="true" signature="2646:2826" placeholder="INSERT INTO delovi..." />
-            <marker date="1462910844997" expanded="true" signature="3087:3452" placeholder="INSERT INTO nalozi..." />
-            <marker date="1462910844997" expanded="true" signature="3993:4027" placeholder="SELECT * FRO..radnici..." />
-            <marker date="1462910844997" expanded="true" signature="5085:5229" placeholder="SELECT proiz..proizvodjaci..." />
+            <marker date="1463687066846" expanded="true" signature="3293:3473" placeholder="INSERT INTO delovi..." />
+            <marker date="1463687066846" expanded="true" signature="3734:4099" placeholder="INSERT INTO nalozi..." />
+            <marker date="1463687066846" expanded="true" signature="4640:4674" placeholder="SELECT * FRO..radnici..." />
+            <marker date="1463687066846" expanded="true" signature="5732:5876" placeholder="SELECT proiz..proizvodjaci..." />
           </folding>
         </state>
       </provider>
@@ -381,9 +371,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="169" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding>
-            <marker date="1462910921825" expanded="true" signature="5324:6793" placeholder="INSERT INTO viljuskari..." />
-            <marker date="1462910921825" expanded="true" signature="7476:7495" placeholder="SELECT * FRO..firme..." />
-            <marker date="1462910921825" expanded="true" signature="8018:8044" placeholder="SELECT * FRO..proizvodjaci..." />
+            <marker date="1463686802757" expanded="true" signature="7364:8833" placeholder="INSERT INTO viljuskari..." />
+            <marker date="1463686802757" expanded="true" signature="9516:9535" placeholder="SELECT * FRO..firme..." />
+            <marker date="1463686802757" expanded="true" signature="10058:10084" placeholder="SELECT * FRO..proizvodjaci..." />
           </folding>
         </state>
       </provider>
@@ -393,8 +383,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="119" column="56" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="56" />
           <folding>
-            <marker date="1462910938173" expanded="true" signature="1562:1935" placeholder="INSERT INTO firme..." />
-            <marker date="1462910938173" expanded="true" signature="4070:4111" placeholder="SELECT * FRO..komercijalisti..." />
+            <marker date="1463686541795" expanded="true" signature="2072:2445" placeholder="INSERT INTO firme..." />
+            <marker date="1463686541795" expanded="true" signature="4580:4621" placeholder="SELECT * FRO..komercijalisti..." />
           </folding>
         </state>
       </provider>
@@ -414,27 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uproizvodjaca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.524138">
-          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ukomercijalista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.06896552">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pradnika.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0517242">
-          <caret line="70" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08793104">
@@ -443,45 +412,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pviljuskara.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5028682">
-          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pnaloga.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0975144">
-          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viljuskari.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pproizvodjaca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3846154">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <marker date="1462821150036" expanded="true" signature="2274:2300" placeholder="SELECT * FRO..proizvodjaci..." />
-            <marker date="1462821150036" expanded="true" signature="2624:2638" placeholder="..." />
-            <marker date="1462821150036" expanded="true" signature="2663:2677" placeholder="..." />
-            <marker date="1462821150036" expanded="true" signature="2703:2717" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -489,13 +423,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7948276">
           <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toolbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.811321">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pdelova.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3461537">
+          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+          <folding>
+            <marker date="1462820908534" expanded="true" signature="2785:2798" placeholder="..." />
+            <marker date="1462820908534" expanded="true" signature="2855:2947" placeholder="SELECT *, de..delovi..." />
+            <marker date="1462820908534" expanded="true" signature="3626:3639" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pfirme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.807693">
+        <state vertical-scroll-proportion="-1.0769231">
           <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
           <folding>
             <marker date="1462891943784" expanded="true" signature="2871:2991" placeholder="SELECT firme..firme..." />
@@ -506,7 +466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pkomercijalista.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
+        <state vertical-scroll-proportion="-14.153846">
           <caret line="71" column="148" selection-start-line="71" selection-start-column="148" selection-end-line="71" selection-end-column="148" />
           <folding>
             <marker date="1462736548857" expanded="true" signature="2358:2386" placeholder="SELECT * FRO..komercijalisti..." />
@@ -517,68 +477,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toolbar.html">
+    <entry file="file://$PROJECT_DIR$/pproizvodjaca.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.811321">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdelova.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.192307">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.3321234">
+          <caret line="20" column="75" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="75" />
           <folding>
-            <marker date="1462820908534" expanded="true" signature="2785:2798" placeholder="..." />
-            <marker date="1462820908534" expanded="true" signature="2855:2947" placeholder="SELECT *, de..delovi..." />
-            <marker date="1462820908534" expanded="true" signature="3626:3639" placeholder="..." />
+            <marker date="1463686296099" expanded="true" signature="2410:2436" placeholder="SELECT * FRO..proizvodjaci..." />
+            <marker date="1463686296099" expanded="true" signature="2760:2774" placeholder="..." />
+            <marker date="1463686296099" expanded="true" signature="2799:2813" placeholder="..." />
+            <marker date="1463686296099" expanded="true" signature="2839:2853" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unaloga.php">
+    <entry file="file://$PROJECT_DIR$/pradnika.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="65.38461">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3321234">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="19" />
           <folding>
-            <marker date="1462910844997" expanded="true" signature="2646:2826" placeholder="INSERT INTO delovi..." />
-            <marker date="1462910844997" expanded="true" signature="3087:3452" placeholder="INSERT INTO nalozi..." />
-            <marker date="1462910844997" expanded="true" signature="3993:4027" placeholder="SELECT * FRO..radnici..." />
-            <marker date="1462910844997" expanded="true" signature="5085:5229" placeholder="SELECT proiz..proizvodjaci..." />
+            <marker date="1463686347054" expanded="true" signature="2600:2621" placeholder="SELECT * FRO..radnici..." />
+            <marker date="1463686347054" expanded="true" signature="2977:2991" placeholder="..." />
+            <marker date="1463686347054" expanded="true" signature="3016:3030" placeholder="..." />
+            <marker date="1463686347054" expanded="true" signature="3056:3070" placeholder="..." />
+            <marker date="1463686347054" expanded="true" signature="3101:3115" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uradnika.php">
+    <entry file="file://$PROJECT_DIR$/pnaloga.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.1538463">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.36551723">
+          <caret line="25" column="75" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="75" />
           <folding>
-            <marker date="1462910902878" expanded="true" signature="604:703" placeholder="INSERT INTO radnici..." />
+            <marker date="1463686376590" expanded="true" signature="2979:3006" placeholder="SELECT ID, i..radnici..." />
+            <marker date="1463686376590" expanded="true" signature="3176:3196" placeholder="SELECT * FRO..nalozi..." />
+            <marker date="1463686376590" expanded="true" signature="3766:3779" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uviljuskara.php">
+    <entry file="file://$PROJECT_DIR$/pviljuskara.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.769231">
-          <caret line="137" column="41" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.3321234">
+          <caret line="25" column="75" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="75" />
           <folding>
-            <marker date="1462910921825" expanded="true" signature="5324:6793" placeholder="INSERT INTO viljuskari..." />
-            <marker date="1462910921825" expanded="true" signature="7476:7495" placeholder="SELECT * FRO..firme..." />
-            <marker date="1462910921825" expanded="true" signature="8018:8044" placeholder="SELECT * FRO..proizvodjaci..." />
+            <marker date="1463686419181" expanded="true" signature="3020:3150" placeholder="SELECT * FRO..viljuskari..." />
+            <marker date="1463686419181" expanded="true" signature="3622:3635" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukomercijalista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321234">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <marker date="1463686453868" expanded="true" signature="591:670" placeholder="INSERT INTO komercijalisti..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ufirme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32586208">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.3321234">
+          <caret line="42" column="89" selection-start-line="42" selection-start-column="84" selection-end-line="42" selection-end-column="89" />
           <folding>
-            <marker date="1462910938173" expanded="true" signature="1562:1935" placeholder="INSERT INTO firme..." />
-            <marker date="1462910938173" expanded="true" signature="4070:4111" placeholder="SELECT * FRO..komercijalisti..." />
+            <marker date="1463686541795" expanded="true" signature="2072:2445" placeholder="INSERT INTO firme..." />
+            <marker date="1463686541795" expanded="true" signature="4580:4621" placeholder="SELECT * FRO..komercijalisti..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34827587">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uproizvodjaca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4246824">
+          <caret line="16" column="98" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+          <folding>
+            <marker date="1463686577846" expanded="true" signature="584:659" placeholder="INSERT INTO proizvodjaci..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uviljuskara.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27041742">
+          <caret line="131" column="87" selection-start-line="131" selection-start-column="87" selection-end-line="131" selection-end-column="87" />
+          <folding>
+            <marker date="1463686802757" expanded="true" signature="7364:8833" placeholder="INSERT INTO viljuskari..." />
+            <marker date="1463686802757" expanded="true" signature="9516:9535" placeholder="SELECT * FRO..firme..." />
+            <marker date="1463686802757" expanded="true" signature="10058:10084" placeholder="SELECT * FRO..proizvodjaci..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uradnika.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43965518">
+          <caret line="18" column="101" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
+          <folding>
+            <marker date="1463686830908" expanded="true" signature="706:805" placeholder="INSERT INTO radnici..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unaloga.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5244123">
+          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+          <folding>
+            <marker date="1463687066846" expanded="true" signature="3293:3473" placeholder="INSERT INTO delovi..." />
+            <marker date="1463687066846" expanded="true" signature="3734:4099" placeholder="INSERT INTO nalozi..." />
+            <marker date="1463687066846" expanded="true" signature="4640:4674" placeholder="SELECT * FRO..radnici..." />
+            <marker date="1463687066846" expanded="true" signature="5732:5876" placeholder="SELECT proiz..proizvodjaci..." />
           </folding>
         </state>
       </provider>

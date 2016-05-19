@@ -12,9 +12,9 @@
 
 <?php
 if(isset($_GET['a'])) {
-		if(isset($_POST['e_ime'])) $ime=$_POST['e_ime'];
+		if(isset($_POST['e_ime'])) $ime=mysqli_real_escape_string($msqli,$_POST['e_ime']);
 			else $ime="";
-		if(isset($_POST['e_zemlja'])) $zemlja=$_POST['e_zemlja'];
+		if(isset($_POST['e_zemlja'])) $zemlja=mysqli_real_escape_string($msqli,$_POST['e_zemlja']);
 			else $zemlja="";
 		
 		$sql='INSERT INTO proizvodjaci (`ime`,`zemlja`) VALUES ("'.$ime.'","'.$zemlja.'")';

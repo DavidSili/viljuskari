@@ -12,35 +12,35 @@
 
 <?php
 if(isset($_GET['a'])) {
-		if(isset($_POST['c_ime'])) $ime=$_POST['c_ime'];
+		if(isset($_POST['c_ime'])) $ime=mysqli_real_escape_string($msqli,$_POST['c_ime']);
 			else $ime="";
-		if(isset($_POST['c_mb'])) $mb=$_POST['c_mb'];
+		if(isset($_POST['c_mb'])) $mb=mysqli_real_escape_string($msqli,$_POST['c_mb']);
 			else $mb="";
-		if(isset($_POST['c_delatnost'])) $delatnost=$_POST['c_delatnost'];
+		if(isset($_POST['c_delatnost'])) $delatnost=mysqli_real_escape_string($msqli,$_POST['c_delatnost']);
 			else $delatnost="";
-		if(isset($_POST['c_pib'])) $pib=$_POST['c_pib'];
+		if(isset($_POST['c_pib'])) $pib=mysqli_real_escape_string($msqli,$_POST['c_pib']);
 			else $pib="";
-		if(isset($_POST['c_adresa'])) $adresa=$_POST['c_adresa'];
+		if(isset($_POST['c_adresa'])) $adresa=mysqli_real_escape_string($msqli,$_POST['c_adresa']);
 			else $adresa="";
-		if(isset($_POST['c_mesto'])) $mesto=$_POST['c_mesto'];
+		if(isset($_POST['c_mesto'])) $mesto=mysqli_real_escape_string($msqli,$_POST['c_mesto']);
 			else $mesto="";
-		if(isset($_POST['c_telefon'])) $telefon=$_POST['c_telefon'];
+		if(isset($_POST['c_telefon'])) $telefon=mysqli_real_escape_string($msqli,$_POST['c_telefon']);
 			else $telefon="";
-		if(isset($_POST['c_fax'])) $fax=$_POST['c_fax'];
+		if(isset($_POST['c_fax'])) $fax=mysqli_real_escape_string($msqli,$_POST['c_fax']);
 			else $fax="";
-		if(isset($_POST['c_mobilni'])) $mobilni=$_POST['c_mobilni'];
+		if(isset($_POST['c_mobilni'])) $mobilni=mysqli_real_escape_string($msqli,$_POST['c_mobilni']);
 			else $mobilni="";
-		if(isset($_POST['c_kontakt'])) $kontakt=$_POST['c_kontakt'];
+		if(isset($_POST['c_kontakt'])) $kontakt=mysqli_real_escape_string($msqli,$_POST['c_kontakt']);
 			else $kontakt="";
-		if(isset($_POST['c_pozicija'])) $pozicija=$_POST['c_pozicija'];
+		if(isset($_POST['c_pozicija'])) $pozicija=mysqli_real_escape_string($msqli,$_POST['c_pozicija']);
 			else $pozicija="";
-		if(isset($_POST['c_email'])) $email=$_POST['c_email'];
+		if(isset($_POST['c_email'])) $email=mysqli_real_escape_string($msqli,$_POST['c_email']);
 			else $email="";
-		if(isset($_POST['c_www'])) $www=$_POST['c_www'];
+		if(isset($_POST['c_www'])) $www=mysqli_real_escape_string($msqli,$_POST['c_www']);
 			else $www="";
-		if(isset($_POST['c_komercijalista'])) $komercijalista=$_POST['c_komercijalista'];
+		if(isset($_POST['c_komercijalista'])) $komercijalista=mysqli_real_escape_string($msqli,$_POST['c_komercijalista']);
 			else $komercijalista="";
-		if(isset($_POST['c_napomena'])) $napomena=$_POST['c_napomena'];
+		if(isset($_POST['c_napomena'])) $napomena=mysqli_real_escape_string($msqli,$_POST['c_napomena']);
 			else $napomena="";
 		
 		$sql='INSERT INTO firme (`ime`,`mb`,`delatnost`,`pib`,`adresa`,`mesto`,`telefon`,`fax`,`mobilni`,`kontakt`,`pozicija`,`email`,`www`,`komercijalista`,`napomena`) VALUES ("'.$ime.'","'.$mb.'","'.$delatnost.'","'.$pib.'","'.$adresa.'","'.$mesto.'","'.$telefon.'","'.$fax.'","'.$mobilni.'","'.$kontakt.'","'.$pozicija.'","'.$email.'","'.$www.'","'.$komercijalista.'","'.$napomena.'")';

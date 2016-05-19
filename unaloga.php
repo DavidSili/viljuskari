@@ -23,33 +23,39 @@
 
 <?php
 if(isset($_GET['a'])) {
-	if(isset($_POST['d_radnik'])) $radnik=$_POST['d_radnik'];
+	if(isset($_POST['d_radnik'])) $radnik=mysqli_real_escape_string($mysqli,$_POST['d_radnik']);
 		else $radnik=array();
-	if(isset($_POST['d_radninalog'])) $radninalog=$_POST['d_radninalog'];
+	if(isset($_POST['d_radninalog'])) $radninalog=mysqli_real_escape_string($mysqli,$_POST['d_radninalog']);
 		else $radninalog="";
-	if(isset($_POST['d_tipnaloga'])) $tipnaloga=$_POST['d_tipnaloga'];
+	if(isset($_POST['d_tipnaloga'])) $tipnaloga=mysqli_real_escape_string($mysqli,$_POST['d_tipnaloga']);
 		else $tipnaloga="";
-	if(isset($_POST['d_datumotvaranja'])) $datumotvaranja=$_POST['d_datumotvaranja'];
+	if(isset($_POST['d_datumotvaranja'])) $datumotvaranja=mysqli_real_escape_string($mysqli,$_POST['d_datumotvaranja']);
 		else $datumotvaranja="";
-	if(isset($_POST['d_datumzatvaranja'])) $datumzatvaranja=$_POST['d_datumzatvaranja'];
+	if(isset($_POST['d_datumzatvaranja'])) $datumzatvaranja=mysqli_real_escape_string($mysqli,$_POST['d_datumzatvaranja']);
 		else $datumzatvaranja="";
-	if(isset($_POST['d_viljuskar'])) $viljuskar=$_POST['d_viljuskar'];
+	if(isset($_POST['d_viljuskar'])) $viljuskar=mysqli_real_escape_string($mysqli,$_POST['d_viljuskar']);
 		else $viljuskar="";
-	if(isset($_POST['d_sati'])) $sati=$_POST['d_sati'];
+	if(isset($_POST['d_sati'])) $sati=mysqli_real_escape_string($mysqli,$_POST['d_sati']);
 		else $sati="";
-	if(isset($_POST['d_satiserv'])) $satiserv=$_POST['d_satiserv'];
+	if(isset($_POST['d_satiserv'])) $satiserv=mysqli_real_escape_string($mysqli,$_POST['d_satiserv']);
 		else $satiserv="";
-	if(isset($_POST['d_teren'])) $teren=$_POST['d_teren'];
+	if(isset($_POST['d_teren'])) $teren=mysqli_real_escape_string($mysqli,$_POST['d_teren']);
 		else $teren="";
-	if(isset($_POST['d_defektaza'])) $defektaza=$_POST['d_defektaza'];
+	if(isset($_POST['d_defektaza'])) $defektaza=mysqli_real_escape_string($mysqli,$_POST['d_defektaza']);
 		else $defektaza="";
-	if(isset($_POST['d_napomena'])) $napomena=$_POST['d_napomena'];
+	if(isset($_POST['d_napomena'])) $napomena=mysqli_real_escape_string($mysqli,$_POST['d_napomena']);
 		else $napomena="";
-	if(isset($_POST['d_hide'])) $hide=$_POST['d_hide'];
+	if(isset($_POST['d_hide'])) $hide=mysqli_real_escape_string($mysqli,$_POST['d_hide']);
 		else $hide="8";
-
-	if ($datumotvaranja!="") $datumotvaranja=date('Y-m-d',strtotime($_POST['d_datumotvaranja']));
-	if ($datumzatvaranja!="") $datumzatvaranja=date('Y-m-d',strtotime($_POST['d_datumzatvaranja']));
+	
+	if ($datumotvaranja!="") {
+		$datumotvaranja=mysqli_real_escape_string($mysqli,$_POST['d_datumotvaranja']);
+		$datumotvaranja=date('Y-m-d',strtotime($datumotvaranja));
+	}
+	if ($datumzatvaranja!="") {
+		$datumzatvaranja=mysqli_real_escape_string($mysqli,$_POST['d_datumzatvaranja']);
+		$datumzatvaranja=date('Y-m-d',strtotime($datumzatvaranja));
+	}
 
 	$rdn="";
 	foreach ($radnik as $a) {
@@ -59,9 +65,9 @@ if(isset($_GET['a'])) {
 
 	$delovix="";
 	for ($i = 1; $i <= $hide; $i++) {
-	if(isset($_POST['d_delovi'.$i.'a'])) $delovia=$_POST['d_delovi'.$i.'a'];
+	if(isset($_POST['d_delovi'.$i.'a'])) $delovia=mysqli_real_escape_string($mysqli,$_POST['d_delovi'.$i.'a']);
 		else $delovia='';
-	if(isset($_POST['d_delovi'.$i.'b'])) $delovib=$_POST['d_delovi'.$i.'b'];
+	if(isset($_POST['d_delovi'.$i.'b'])) $delovib=mysqli_real_escape_string($mysqli,$_POST['d_delovi'.$i.'b']);
 		else $delovib='';
 	
 	$sql='INSERT INTO delovi (`nalog`,`viljuskar`,`radnik`,`datum`,`naziv`,`broj`) VALUES ("'.$radninalog.'","'.$viljuskar.'","'.$rdn.'","'.$datumzatvaranja.'","'.$delovia.'","'.$delovib.'")';

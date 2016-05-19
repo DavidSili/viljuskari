@@ -15,15 +15,15 @@
 
 <?php
 
-	if(isset($_POST['sel1'])) $sel1=$_POST['sel1'];
+	if(isset($_POST['sel1'])) $sel1=mysqli_real_escape_string($msqli,$_POST['sel1']);
 		else $sel1="`viljuskari`.`upis`";
-	if(isset($_POST['sel2'])) $sel2=$_POST['sel2'];
+	if(isset($_POST['sel2'])) $sel2=mysqli_real_escape_string($msqli,$_POST['sel2']);
 		else $sel2="";
-	if(isset($_POST['sel3'])) $sel3=$_POST['sel3'];
+	if(isset($_POST['sel3'])) $sel3=mysqli_real_escape_string($msqli,$_POST['sel3']);
 		else $sel3="`viljuskari`.`upis`";
-	if(isset($_POST['sel4'])) $sel4=$_POST['sel4'];
+	if(isset($_POST['sel4'])) $sel4=mysqli_real_escape_string($msqli,$_POST['sel4']);
 		else $sel4="ASC";
-	if(isset($_POST['sel5'])) $sel5=$_POST['sel5'];
+	if(isset($_POST['sel5'])) $sel5=mysqli_real_escape_string($msqli,$_POST['sel5']);
 		else $sel5="100";
 ?>
 <div id="header" style="width:3000px">

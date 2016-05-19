@@ -12,13 +12,13 @@
 <body>
 
 <?php
-	if(isset($_POST['sel1'])) $sel1=$_POST['sel1'];
+	if(isset($_POST['sel1'])) $sel1=mysqli_real_escape_string($msqli,$_POST['sel1']);
 		else $sel1="ime";
-	if(isset($_POST['sel2'])) $sel2=$_POST['sel2'];
+	if(isset($_POST['sel2'])) $sel2=mysqli_real_escape_string($msqli,$_POST['sel2']);
 		else $sel2="";
-	if(isset($_POST['sel3'])) $sel3=$_POST['sel3'];
+	if(isset($_POST['sel3'])) $sel3=mysqli_real_escape_string($msqli,$_POST['sel3']);
 		else $sel3="id";
-	if(isset($_POST['sel4'])) $sel4=$_POST['sel4'];
+	if(isset($_POST['sel4'])) $sel4=mysqli_real_escape_string($msqli,$_POST['sel4']);
 		else $sel4="ASC";
 ?>
 <div id="header">

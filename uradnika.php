@@ -12,11 +12,11 @@
 
 <?php
 if(isset($_GET['a'])) {
-		if(isset($_POST['b_ime'])) $ime=$_POST['b_ime'];
+		if(isset($_POST['b_ime'])) $ime=mysqli_real_escape_string($msqli,$_POST['b_ime']);
 			else $ime="";
-		if(isset($_POST['b_pozicija'])) $pozicija=$_POST['b_pozicija'];
+		if(isset($_POST['b_pozicija'])) $pozicija=mysqli_real_escape_string($msqli,$_POST['b_pozicija']);
 			else $pozicija="";
-		if(isset($_POST['b_telefon'])) $telefon=$_POST['b_telefon'];
+		if(isset($_POST['b_telefon'])) $telefon=mysqli_real_escape_string($msqli,$_POST['b_telefon']);
 			else $telefon="";
 		
 		$sql='INSERT INTO radnici (`ime`,`pozicija`,`telefon`) VALUES ("'.$ime.'","'.$pozicija.'","'.$telefon.'")';
