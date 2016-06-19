@@ -99,14 +99,14 @@
 	while($row=$result->fetch_assoc()) {
 		echo '<tr>';
 		foreach($row as $cell) {
-		if ($count<=12) {
+		if ($count<=13) {
 			if ((substr($cell,4,1)=="-") AND (substr($cell,7,1)=="-")) {
 				if ($cell!="0000-00-00") $cell=date('d.m.Y.',strtotime($cell));
 					else $cell="";
 			}
 			if (strlen($cell)>72) $cell = substr($cell, 0, 70).'...';
 			echo '<td style="padding:0 2px">';
-				if ($count==1) {
+				if ($count==2) {
 					echo str_replace($radarrno, $radarrda, $cell);
 				}
 					else echo $cell;

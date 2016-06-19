@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22257122-4ad1-485f-8bc1-df102cc3f4f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pnaloga.php" afterPath="$PROJECT_DIR$/pnaloga.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pproizvodjaca.php" afterPath="$PROJECT_DIR$/pproizvodjaca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pradnika.php" afterPath="$PROJECT_DIR$/pradnika.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pviljuskara.php" afterPath="$PROJECT_DIR$/pviljuskara.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ufirme.php" afterPath="$PROJECT_DIR$/ufirme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ukomercijalista.php" afterPath="$PROJECT_DIR$/ukomercijalista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unaloga.php" afterPath="$PROJECT_DIR$/unaloga.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uproizvodjaca.php" afterPath="$PROJECT_DIR$/uproizvodjaca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uradnika.php" afterPath="$PROJECT_DIR$/uradnika.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uviljuskara.php" afterPath="$PROJECT_DIR$/uviljuskara.php" />
-    </list>
+    <list default="true" id="22257122-4ad1-485f-8bc1-df102cc3f4f8" name="Default" comment="" />
     <ignored path="viljuskari.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
